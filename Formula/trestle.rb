@@ -6,15 +6,29 @@ class Trestle < Formula
   stable do
     on_macos do
       on_arm do
-        url "https://pkg.trestlescan.com/iN/5FUrW8RUBvJ2Js5fKDf9d3XJ/trestle-community-1.3.0-macos-apple-silicon"
-        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.3.0/trestle-community-1.3.0-macos-apple-silicon"
-        sha256 "2b84d149136d288526a666ad15fd9bdfe0f5bbedeaa21bb383adc00a60f7e8e7"
+        url "https://pkg.trestlescan.com/hG/kxL5Es4mRzrR1UUExtXJfH3U/trestle-community-1.4.0-macos-apple-silicon"
+        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.0/trestle-community-1.4.0-macos-apple-silicon"
+        sha256 "d1a90dbe0c66b053a2f12dd77bed4692a89bafb3aa1eb9371e02ebe6ca3ec545"
       end
 
       on_intel do
-        url "https://pkg.trestlescan.com/iN/5FUrW8RUBvJ2Js5fKDf9d3XJ/trestle-community-1.3.0-macos-intel"
-        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.3.0/trestle-community-1.3.0-macos-intel"
-        sha256 "0abe70c4d5d58161fd2d4fde620fc7dcebc09437599786280da1a284fe37916b"
+        url "https://pkg.trestlescan.com/hG/kxL5Es4mRzrR1UUExtXJfH3U/trestle-community-1.4.0-macos-intel"
+        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.0/trestle-community-1.4.0-macos-intel"
+        sha256 "ecabbfa8079d4a4f860a3dd85aaad1604a5bfbf06d559d20f79693e8cde1a11c"
+      end
+    end
+
+    resource "trestle-net" do
+      on_arm do
+        url "https://pkg.trestlescan.com/hG/kxL5Es4mRzrR1UUExtXJfH3U/trestle-net-community-1.4.0-macos-apple-silicon"
+        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.0/trestle-net-community-1.4.0-macos-apple-silicon"
+        sha256 "62271bc01d66120360a6082a49b22efc38a72efa4af75b950d1c60c57db8e1df"
+      end
+
+      on_intel do
+        url "https://pkg.trestlescan.com/hG/kxL5Es4mRzrR1UUExtXJfH3U/trestle-net-community-1.4.0-macos-intel"
+        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.0/trestle-net-community-1.4.0-macos-intel"
+        sha256 "df391dc033bf841d3af49f953369cb6231384bbcf3e5d0f8f65d9f681135b6b5"
       end
     end
   end
@@ -31,10 +45,14 @@ class Trestle < Formula
       system "cargo", "install", *std_cargo_args
     else
       bin.install Dir["trestle-community-*"].first => "trestle"
+      resource("trestle-net").stage do
+        bin.install Dir["trestle-net-community-*"].first => "trestle-net"
+      end
     end
   end
 
   test do
     assert_match(/Trestle \w+ \d+\.\d+\.\d+/, shell_output("#{bin}/trestle --version"))
+    assert_match(/Trestle \w+ \d+\.\d+\.\d+/, shell_output("#{bin}/trestle-net --version"))
   end
 end
