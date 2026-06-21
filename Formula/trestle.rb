@@ -6,29 +6,29 @@ class Trestle < Formula
   stable do
     on_macos do
       on_arm do
-        url "https://pkg.trestlescan.com/hG/kxL5Es4mRzrR1UUExtXJfH3U/trestle-community-1.4.0-macos-apple-silicon"
-        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.0/trestle-community-1.4.0-macos-apple-silicon"
-        sha256 "d1a90dbe0c66b053a2f12dd77bed4692a89bafb3aa1eb9371e02ebe6ca3ec545"
+        url "https://pkg.trestlescan.com/Nz/iVXTx2BehnsdEga1RidS8c2u/trestle-community-1.4.1-macos-apple-silicon"
+        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.1/trestle-community-1.4.1-macos-apple-silicon"
+        sha256 "c48e829c0be3029ecb565841f7f0f231edc79594419b425bad3d9484975a7588"
       end
 
       on_intel do
-        url "https://pkg.trestlescan.com/hG/kxL5Es4mRzrR1UUExtXJfH3U/trestle-community-1.4.0-macos-intel"
-        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.0/trestle-community-1.4.0-macos-intel"
-        sha256 "ecabbfa8079d4a4f860a3dd85aaad1604a5bfbf06d559d20f79693e8cde1a11c"
+        url "https://pkg.trestlescan.com/Nz/iVXTx2BehnsdEga1RidS8c2u/trestle-community-1.4.1-macos-intel"
+        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.1/trestle-community-1.4.1-macos-intel"
+        sha256 "0e1669c7e9d7a3773ac93dfd02d22a52650aecc7da134140f5e51830af09cce8"
       end
     end
 
     resource "trestle-net" do
       on_arm do
-        url "https://pkg.trestlescan.com/hG/kxL5Es4mRzrR1UUExtXJfH3U/trestle-net-community-1.4.0-macos-apple-silicon"
-        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.0/trestle-net-community-1.4.0-macos-apple-silicon"
-        sha256 "62271bc01d66120360a6082a49b22efc38a72efa4af75b950d1c60c57db8e1df"
+        url "https://pkg.trestlescan.com/Nz/iVXTx2BehnsdEga1RidS8c2u/trestle-net-community-1.4.1-macos-apple-silicon"
+        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.1/trestle-net-community-1.4.1-macos-apple-silicon"
+        sha256 "3592b2449c30b75002c411dc084e3b68f412dd5f3bfa614753eea891cbc5ac93"
       end
 
       on_intel do
-        url "https://pkg.trestlescan.com/hG/kxL5Es4mRzrR1UUExtXJfH3U/trestle-net-community-1.4.0-macos-intel"
-        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.0/trestle-net-community-1.4.0-macos-intel"
-        sha256 "df391dc033bf841d3af49f953369cb6231384bbcf3e5d0f8f65d9f681135b6b5"
+        url "https://pkg.trestlescan.com/Nz/iVXTx2BehnsdEga1RidS8c2u/trestle-net-community-1.4.1-macos-intel"
+        mirror "https://github.com/toro-guapo/trestle/releases/download/v1.4.1/trestle-net-community-1.4.1-macos-intel"
+        sha256 "87d28b4aa029dea95393c61d44d658f345897a5f7654fbdb53f4fb74d02edd53"
       end
     end
   end
